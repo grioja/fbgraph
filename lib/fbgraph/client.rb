@@ -37,7 +37,7 @@ module FBGraph
     end
     
     def oauth_client
-      OAuth2::Client.new(client_id, secret_id, :site => { :url => facebook_uri }, :ssl => oauth_client_ssl_options, :adapter => :typhoeus)
+      OAuth2::Client.new(client_id, secret_id, :site => { :url => facebook_uri, :ssl => oauth_client_ssl_options })
     end
 
     def oauth_client_ssl_options
